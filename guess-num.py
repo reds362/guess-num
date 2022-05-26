@@ -1,14 +1,23 @@
 import random
-r =random.randint(1,100)
+start = input("請輸入起始數字")
+end = input("請輸入結束數字")
 
+start = int(start)
+end = int(end)
+
+r =random.randint(start,end)
+count = 0
 while True:
 	num = input('請輸入一個數字來猜猜看')
 	num = int(num)
+	count += 1 # count = count + 1
 	if num == r :
 		print("bingo")
+		print('你猜了第', count, '次 ,才猜對了!! ')
 		break
 	elif num > r :
 		print('比答案大')
 	else:
 		print('比答案小')
+	print('你猜了第', count, '次')
 	
